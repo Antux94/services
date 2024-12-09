@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>EmployerInfo.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ccol_riskadmissionscalculateincomesv0</a> &gt; <a href="index.source.html" class="el_package">com.bbva.ccol.riskadmissionscalculateincomes.business.v0.dao.model.cmlct001_1.out</a> &gt; <span class="el_source">EmployerInfo.java</span></div><h1>EmployerInfo.java</h1><pre class="source lang-java linenums">package com.bbva.ccol.riskadmissionscalculateincomes.business.v0.dao.model.cmlct001_1.out;
+
+import com.bbva.jee.arq.spring.core.host.Campo;
+import com.bbva.jee.arq.spring.core.host.FilaCampoTabular;
+import com.bbva.jee.arq.spring.core.host.TipoCampo;
+
+/**
+ * &lt;p&gt;Bean fila para el campo tabular &lt;code&gt;employerInfo&lt;/code&gt;, utilizado por la clase &lt;code&gt;Employers&lt;/code&gt;&lt;/p&gt;
+ * 
+ * @see Employers
+ * 
+ * @author Arquitectura Spring BBVA
+ */
+@FilaCampoTabular
+<span class="nc" id="L15">public class EmployerInfo {</span>
+	
+	/**
+	 * &lt;p&gt;Campo &lt;code&gt;companyName&lt;/code&gt;, &amp;iacute;ndice: &lt;code&gt;1&lt;/code&gt;, tipo: &lt;code&gt;ALFANUMERICO&lt;/code&gt;
+	 */
+	@Campo(indice = 1, nombre = &quot;companyName&quot;, tipo = TipoCampo.ALFANUMERICO, longitudMaxima = 255, signo = true, obligatorio = true)
+	private String companyName;
+	
+	/**
+	 * &lt;p&gt;Campo &lt;code&gt;identityDocument&lt;/code&gt;, &amp;iacute;ndice: &lt;code&gt;2&lt;/code&gt;, tipo: &lt;code&gt;DTO&lt;/code&gt;
+	 */
+	@Campo(indice = 2, nombre = &quot;identityDocument&quot;, tipo = TipoCampo.DTO)
+	private IdentityDocument identityDocument;
+	
+	/**
+	 * &lt;p&gt;Campo &lt;code&gt;economicActivity&lt;/code&gt;, &amp;iacute;ndice: &lt;code&gt;3&lt;/code&gt;, tipo: &lt;code&gt;DTO&lt;/code&gt;
+	 */
+	@Campo(indice = 3, nombre = &quot;economicActivity&quot;, tipo = TipoCampo.DTO)
+	private EconomicActivity economicActivity;
+	
+
+	public String getCompanyName() {
+<span class="nc" id="L37">	    return companyName;</span>
+	}
+
+	public void setCompanyName(String companyName) {
+<span class="nc" id="L41">    	this.companyName = companyName;</span>
+<span class="nc" id="L42">	}</span>
+
+	public IdentityDocument getIdentityDocument() {
+<span class="nc" id="L45">	    return identityDocument;</span>
+	}
+
+	public void setIdentityDocument(IdentityDocument identityDocument) {
+<span class="nc" id="L49">    	this.identityDocument = identityDocument;</span>
+<span class="nc" id="L50">	}</span>
+
+	public EconomicActivity getEconomicActivity() {
+<span class="nc" id="L53">	    return economicActivity;</span>
+	}
+
+	public void setEconomicActivity(EconomicActivity economicActivity) {
+<span class="nc" id="L57">    	this.economicActivity = economicActivity;</span>
+<span class="nc" id="L58">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

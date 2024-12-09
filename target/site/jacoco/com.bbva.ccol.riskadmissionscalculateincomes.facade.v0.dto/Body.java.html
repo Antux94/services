@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Body.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ccol_riskadmissionscalculateincomesv0</a> &gt; <a href="index.source.html" class="el_package">com.bbva.ccol.riskadmissionscalculateincomes.facade.v0.dto</a> &gt; <span class="el_source">Body.java</span></div><h1>Body.java</h1><pre class="source lang-java linenums">
+package com.bbva.ccol.riskadmissionscalculateincomes.facade.v0.dto;
+
+import java.util.List;
+
+public class Body {
+    
+    private Person person;
+    private List&lt;InformationSources&gt; informationSources;
+    private Product product;
+    
+<span class="fc" id="L12">public Body() {}</span>
+
+public Person getPerson() {
+<span class="fc" id="L15">    return person;</span>
+}
+
+public void setPerson(Person person) {
+<span class="fc" id="L19">    this.person = person;</span>
+<span class="fc" id="L20">}</span>
+
+public List&lt;InformationSources&gt; getInformationSources() {
+<span class="fc" id="L23">    return informationSources;</span>
+}
+
+public void setInformationSources(List&lt;InformationSources&gt; informationSources) {
+<span class="fc" id="L27">    this.informationSources = informationSources;</span>
+<span class="fc" id="L28">}</span>
+
+public Product getProduct() {
+<span class="fc" id="L31">    return product;</span>
+}
+
+public void setProduct(Product product) {
+<span class="fc" id="L35">    this.product = product;</span>
+<span class="fc" id="L36">}</span>
+
+@Override
+public String toString() {
+<span class="nc" id="L40">    return &quot;Body{&quot; +</span>
+<span class="nc" id="L41">    &quot;person=&quot; + person +</span>
+<span class="nc" id="L42">    &quot;, informationSources=&quot; + informationSources +</span>
+<span class="nc" id="L43">    &quot;, product=&quot; + product +</span>
+<span class="nc" id="L44">    '}';</span>
+}
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>
