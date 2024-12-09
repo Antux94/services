@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Person.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ccol_riskadmissionscalculateincomesv0</a> &gt; <a href="index.source.html" class="el_package">com.bbva.ccol.riskadmissionscalculateincomes.business.v0.dao.model.cmlct001_1.out</a> &gt; <span class="el_source">Person.java</span></div><h1>Person.java</h1><pre class="source lang-java linenums">package com.bbva.ccol.riskadmissionscalculateincomes.business.v0.dao.model.cmlct001_1.out;
+
+import com.bbva.jee.arq.spring.core.host.Campo;
+import com.bbva.jee.arq.spring.core.host.FilaCampoTabular;
+import com.bbva.jee.arq.spring.core.host.TipoCampo;
+
+/**
+ * &lt;p&gt;Bean fila para el campo tabular &lt;code&gt;person&lt;/code&gt;, utilizado por la clase &lt;code&gt;Data&lt;/code&gt;&lt;/p&gt;
+ * 
+ * @see Data
+ * 
+ * @author Arquitectura Spring BBVA
+ */
+@FilaCampoTabular
+<span class="nc" id="L15">public class Person {</span>
+	
+	/**
+	 * &lt;p&gt;Campo &lt;code&gt;identityDocument&lt;/code&gt;, &amp;iacute;ndice: &lt;code&gt;1&lt;/code&gt;, tipo: &lt;code&gt;DTO&lt;/code&gt;
+	 */
+	@Campo(indice = 1, nombre = &quot;identityDocument&quot;, tipo = TipoCampo.DTO)
+	private IdentityDocument identityDocument;
+	
+	/**
+	 * &lt;p&gt;Campo &lt;code&gt;firstName&lt;/code&gt;, &amp;iacute;ndice: &lt;code&gt;2&lt;/code&gt;, tipo: &lt;code&gt;ALFANUMERICO&lt;/code&gt;
+	 */
+	@Campo(indice = 2, nombre = &quot;firstName&quot;, tipo = TipoCampo.ALFANUMERICO, longitudMaxima = 255, signo = true, obligatorio = true)
+	private String firstName;
+	
+	/**
+	 * &lt;p&gt;Campo &lt;code&gt;middleName&lt;/code&gt;, &amp;iacute;ndice: &lt;code&gt;3&lt;/code&gt;, tipo: &lt;code&gt;ALFANUMERICO&lt;/code&gt;
+	 */
+	@Campo(indice = 3, nombre = &quot;middleName&quot;, tipo = TipoCampo.ALFANUMERICO, longitudMaxima = 255, signo = true)
+	private String middleName;
+	
+	/**
+	 * &lt;p&gt;Campo &lt;code&gt;lastName&lt;/code&gt;, &amp;iacute;ndice: &lt;code&gt;4&lt;/code&gt;, tipo: &lt;code&gt;ALFANUMERICO&lt;/code&gt;
+	 */
+	@Campo(indice = 4, nombre = &quot;lastName&quot;, tipo = TipoCampo.ALFANUMERICO, longitudMaxima = 255, signo = true, obligatorio = true)
+	private String lastName;
+	
+	/**
+	 * &lt;p&gt;Campo &lt;code&gt;laboralInformation&lt;/code&gt;, &amp;iacute;ndice: &lt;code&gt;5&lt;/code&gt;, tipo: &lt;code&gt;DTO&lt;/code&gt;
+	 */
+	@Campo(indice = 5, nombre = &quot;laboralInformation&quot;, tipo = TipoCampo.DTO)
+	private LaboralInformation laboralInformation;
+	
+
+	public IdentityDocument getIdentityDocument() {
+<span class="nc" id="L49">	    return identityDocument;</span>
+	}
+
+	public void setIdentityDocument(IdentityDocument identityDocument) {
+<span class="nc" id="L53">    	this.identityDocument = identityDocument;</span>
+<span class="nc" id="L54">	}</span>
+
+	public String getFirstName() {
+<span class="nc" id="L57">	    return firstName;</span>
+	}
+
+	public void setFirstName(String firstName) {
+<span class="nc" id="L61">    	this.firstName = firstName;</span>
+<span class="nc" id="L62">	}</span>
+
+	public String getMiddleName() {
+<span class="nc" id="L65">	    return middleName;</span>
+	}
+
+	public void setMiddleName(String middleName) {
+<span class="nc" id="L69">    	this.middleName = middleName;</span>
+<span class="nc" id="L70">	}</span>
+
+	public String getLastName() {
+<span class="nc" id="L73">	    return lastName;</span>
+	}
+
+	public void setLastName(String lastName) {
+<span class="nc" id="L77">    	this.lastName = lastName;</span>
+<span class="nc" id="L78">	}</span>
+
+	public LaboralInformation getLaboralInformation() {
+<span class="nc" id="L81">	    return laboralInformation;</span>
+	}
+
+	public void setLaboralInformation(LaboralInformation laboralInformation) {
+<span class="nc" id="L85">    	this.laboralInformation = laboralInformation;</span>
+<span class="nc" id="L86">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>
