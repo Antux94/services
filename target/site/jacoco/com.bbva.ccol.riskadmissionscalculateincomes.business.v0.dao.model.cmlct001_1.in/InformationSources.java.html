@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>InformationSources.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ccol_riskadmissionscalculateincomesv0</a> &gt; <a href="index.source.html" class="el_package">com.bbva.ccol.riskadmissionscalculateincomes.business.v0.dao.model.cmlct001_1.in</a> &gt; <span class="el_source">InformationSources.java</span></div><h1>InformationSources.java</h1><pre class="source lang-java linenums">package com.bbva.ccol.riskadmissionscalculateincomes.business.v0.dao.model.cmlct001_1.in;
+
+import com.bbva.jee.arq.spring.core.host.Campo;
+import com.bbva.jee.arq.spring.core.host.FilaCampoTabular;
+import com.bbva.jee.arq.spring.core.host.TipoCampo;
+
+/**
+ * &lt;p&gt;Bean fila para el campo tabular &lt;code&gt;informationSources&lt;/code&gt;, utilizado por la clase &lt;code&gt;InformationSources&lt;/code&gt;&lt;/p&gt;
+ * 
+ * @see InformationSources
+ * 
+ * @author Arquitectura Spring BBVA
+ */
+@FilaCampoTabular
+<span class="nc" id="L15">public class InformationSources {</span>
+	
+	/**
+	 * &lt;p&gt;Campo &lt;code&gt;id&lt;/code&gt;, &amp;iacute;ndice: &lt;code&gt;1&lt;/code&gt;, tipo: &lt;code&gt;ALFANUMERICO&lt;/code&gt;
+	 */
+	@Campo(indice = 1, nombre = &quot;id&quot;, tipo = TipoCampo.ALFANUMERICO, longitudMaxima = 255, signo = true, obligatorio = true)
+	private String id;
+	
+	/**
+	 * &lt;p&gt;Campo &lt;code&gt;isConsulted&lt;/code&gt;, &amp;iacute;ndice: &lt;code&gt;2&lt;/code&gt;, tipo: &lt;code&gt;ALFANUMERICO&lt;/code&gt;
+	 */
+	@Campo(indice = 2, nombre = &quot;isConsulted&quot;, tipo = TipoCampo.ALFANUMERICO, longitudMaxima = 255, signo = true)
+	private String isConsulted;
+	
+
+	public String getId() {
+<span class="nc" id="L31">	    return id;</span>
+	}
+
+	public void setId(String id) {
+<span class="nc" id="L35">    	this.id = id;</span>
+<span class="nc" id="L36">	}</span>
+
+	public String getIsConsulted() {
+<span class="nc" id="L39">	    return isConsulted;</span>
+	}
+
+	public void setIsConsulted(String isConsulted) {
+<span class="nc" id="L43">    	this.isConsulted = isConsulted;</span>
+<span class="nc" id="L44">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

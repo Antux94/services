@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mock name="transactionResponses" xmlns="http://bbva.com/mocking" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://bbva.com/mocking mocking.xsd">
+
+    <description>Mock to define custom responses for transactions</description>
+
+    <test-case name="CMLCT001" condition="@tname == 'CMLCT001'">
+        <description>Custom response for the transaction CMLCT001</description>
+        <script>
+            result = new com.bbva.jee.arq.spring.core.host.protocolo.TransactionResponse();
+            result.response = new com.bbva.ccol.riskadmissionscalculateincomes.business.v0.dao.model.RespuestaTransaccionCmlct001();
+            result.response.codigoAviso='0035WARN';
+            result.response.descripcionAviso='Mock warning OTMA description';
+            result.response.codigoRetorno='200';
+
+            result.response.appId = 'appIdTX';
+
+            result.response.data = new com.bbva.ccol.riskadmissionscalculateincomes.business.v0.dao.model.TxData();
+            result.response.data.person = new com.bbva.ccol.riskadmissionscalculateincomes.business.v0.dao.model.TxPerson();
+
+            result.response.data.person.firstName = 'firstName';
+            result.response.data.person.middleName = 'middleName';
+            result.response.data.person.lastName = 'lastName';
+            result.response.data.person.identityDocument = new com.bbva.ccol.riskadmissionscalculateincomes.business.v0.dao.model.TxIdentityDocument();
+            result.response.data.person.identityDocument.documentType = 'PASSPORT';
+            result.response.data.person.identityDocument.documentNumber = '232423';
+            result.response.data.informationSources = new java.util.ArrayList();
+            result.response.data.informationSources = new com.bbva.ccol.riskadmissionscalculateincomes.business.v0.dao.model.TxInformationSources();
+            result.response.data.informationSources[0].id = 'SOI';
+            result.response.data.informationSources[0].isConsulted = new java.lang.Boolean(true);
+
+            result.response.data.totalIncomes = new com.bbva.ccol.riskadmissionscalculateincomes.business.v0.dao.model.TxTotalIncomes();
+            result.response.data.totalIncomes.amount=234L;
+            result.response.data.totalIncomes.currency='inc currency';
+            result.response.data.totalDeductions = new com.bbva.ccol.riskadmissionscalculateincomes.business.v0.dao.model.TxTotalDeductions();
+            result.response.data.totalDeductions.amount = 4646L;
+            result.response.data.totalDeductions.currency = 'currency';
+
+
+            result.response.data.employers = new java.util.ArrayList();
+            result.response.data.employers = new com.bbva.ccol.riskadmissionscalculateincomes.business.v0.dao.model.TxEmployers();
+            result.response.data.employers[0].employerInfo = new com.bbva.ccol.riskadmissionscalculateincomes.business.v0.dao.model.TxEmployerInfo();
+            result.response.data.employers[0].employerInfo.companyName = 'companyX';
+            result.response.data.employers[0].employerInfo.identityDocument = new com.bbva.ccol.riskadmissionscalculateincomes.business.v0.dao.model.TxIdentityDocument();
+            result.response.data.employers[0].employerInfo.identityDocument.documentType = 'PASSPORT';
+            result.response.data.employers[0].employerInfo.identityDocument.documentNumber = '232423';
+            result.response.data.employers[0].employerInfo.economicActivity = new com.bbva.ccol.riskadmissionscalculateincomes.business.v0.dao.model.TxEconomicActivity();
+            result.response.data.employers[0].employerInfo.economicActivity.id ='433';
+            result.response.data.employers[0].employerInfo.economicActivity.name='economicx';
+            result.response.data.employers[0].employerInfo.economicActivity.internationalClassification ='internationalEx';
+
+            result.response.data.employers[0].participantInformation = new com.bbva.ccol.riskadmissionscalculateincomes.business.v0.dao.model.TxParticipantInformation();
+            result.response.data.employers[0].participantInformation.seniority =new com.bbva.ccol.riskadmissionscalculateincomes.business.v0.dao.model.TxSeniority();
+            result.response.data.employers[0].participantInformation.seniority.number=2342L;
+            result.response.data.employers[0].participantInformation.seniority.period=new com.bbva.ccol.riskadmissionscalculateincomes.business.v0.dao.model.TxPeriod();
+            result.response.data.employers[0].participantInformation.seniority.period.id='YEAR';
+            result.response.data.employers[0].participantInformation.seniority.period.name='periodNamex';
+
+            result.response.data.employers[0].participantInformation.incomes = new java.util.ArrayList();
+            result.response.data.employers[0].participantInformation.incomes = new com.bbva.ccol.riskadmissionscalculateincomes.business.v0.dao.model.TxIncomes();
+            result.response.data.employers[0].participantInformation.incomes[0].id='SALARY';
+            result.response.data.employers[0].participantInformation.incomes[0].name='PIName';
+            result.response.data.employers[0].participantInformation.incomes[0].incomeAmount = new com.bbva.ccol.riskadmissionscalculateincomes.business.v0.dao.model.TxIncomeAmount();
+            result.response.data.employers[0].participantInformation.incomes[0].incomeAmount.amount=2321L;
+            result.response.data.employers[0].participantInformation.incomes[0].incomeAmount.currency='currencyTIx';
+            result.response.data.employers[0].participantInformation.incomes[0].frecuency='DAILY';
+            result.response.data.employers[0].participantInformation.deduction=new com.bbva.ccol.riskadmissionscalculateincomes.business.v0.dao.model.TxDeduction();
+            result.response.data.employers[0].participantInformation.deduction.amount = 1234L;
+            result.response.data.employers[0].participantInformation.deduction.currency = 'currencyDX';
+
+            result.response.data.employers[0].participantInformation.employmentSituation = new com.bbva.ccol.riskadmissionscalculateincomes.business.v0.dao.model.TxEmploymentSituation();
+            result.response.data.employers[0].participantInformation.employmentSituation.id = '3423';
+            result.response.data.employers[0].participantInformation.employmentSituation.name = 'employmentX';
+            result.response.data.employers[0].participantInformation.dateRelationship = '11-07-2022';
+        </script>
+    </test-case>
+    <default-test-case>
+        <description>If no response has been set for the transaction an exception is thrown</description>
+        <script>
+            throwable = new com.bbva.jee.arq.spring.core.host.ExcepcionTransaccion("Dummy transaction response not
+            found. Please define the mock response in transactionResponses.xml");
+        </script>
+    </default-test-case>
+</mock>
