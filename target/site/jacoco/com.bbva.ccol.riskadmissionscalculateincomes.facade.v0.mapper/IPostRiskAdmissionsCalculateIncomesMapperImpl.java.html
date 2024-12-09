@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>IPostRiskAdmissionsCalculateIncomesMapperImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ccol_riskadmissionscalculateincomesv0</a> &gt; <a href="index.source.html" class="el_package">com.bbva.ccol.riskadmissionscalculateincomes.facade.v0.mapper</a> &gt; <span class="el_source">IPostRiskAdmissionsCalculateIncomesMapperImpl.java</span></div><h1>IPostRiskAdmissionsCalculateIncomesMapperImpl.java</h1><pre class="source lang-java linenums">package com.bbva.ccol.riskadmissionscalculateincomes.facade.v0.mapper;
+
+import com.bbva.ccol.riskadmissionscalculateincomes.business.v0.dto.BBody;
+import com.bbva.ccol.riskadmissionscalculateincomes.business.v0.dto.BIdentityDocument;
+import com.bbva.ccol.riskadmissionscalculateincomes.business.v0.dto.BInformationSources;
+import com.bbva.ccol.riskadmissionscalculateincomes.business.v0.dto.BLaboralInformation;
+import com.bbva.ccol.riskadmissionscalculateincomes.business.v0.dto.BPerson;
+import com.bbva.ccol.riskadmissionscalculateincomes.business.v0.dto.BProduct;
+import com.bbva.ccol.riskadmissionscalculateincomes.facade.v0.dto.Body;
+import com.bbva.ccol.riskadmissionscalculateincomes.facade.v0.dto.IdentityDocument;
+import com.bbva.ccol.riskadmissionscalculateincomes.facade.v0.dto.InformationSources;
+import com.bbva.ccol.riskadmissionscalculateincomes.facade.v0.dto.LaboralInformation;
+import com.bbva.ccol.riskadmissionscalculateincomes.facade.v0.dto.Person;
+import com.bbva.ccol.riskadmissionscalculateincomes.facade.v0.dto.Product;
+import java.util.ArrayList;
+import java.util.List;
+import javax.annotation.Generated;
+import org.springframework.stereotype.Component;
+
+@Generated(
+    value = &quot;org.mapstruct.ap.MappingProcessor&quot;,
+    date = &quot;2024-12-09T11:05:54-0500&quot;,
+    comments = &quot;version: 1.2.0.Final, compiler: javac, environment: Java 1.8.0_131 (Oracle Corporation)&quot;
+)
+@Component
+<span class="fc" id="L26">public class IPostRiskAdmissionsCalculateIncomesMapperImpl implements IPostRiskAdmissionsCalculateIncomesMapper {</span>
+
+    @Override
+    public BBody mapInData(Body dto) {
+<span class="pc bpc" id="L30" title="1 of 2 branches missed.">        if ( dto == null ) {</span>
+<span class="nc" id="L31">            return null;</span>
+        }
+
+<span class="fc" id="L34">        BBody bBody = new BBody();</span>
+
+<span class="fc" id="L36">        bBody.setPerson( personToBPerson( dto.getPerson() ) );</span>
+<span class="fc" id="L37">        bBody.setInformationSources( informationSourcesListToBInformationSourcesList( dto.getInformationSources() ) );</span>
+<span class="fc" id="L38">        bBody.setProduct( productToBProduct( dto.getProduct() ) );</span>
+
+<span class="fc" id="L40">        return bBody;</span>
+    }
+
+    @Override
+    public Body mapOutData(BBody dtoInt) {
+<span class="pc bpc" id="L45" title="1 of 2 branches missed.">        if ( dtoInt == null ) {</span>
+<span class="nc" id="L46">            return null;</span>
+        }
+
+<span class="fc" id="L49">        Body body = new Body();</span>
+
+<span class="fc" id="L51">        body.setPerson( bPersonToPerson( dtoInt.getPerson() ) );</span>
+<span class="fc" id="L52">        body.setInformationSources( bInformationSourcesListToInformationSourcesList( dtoInt.getInformationSources() ) );</span>
+<span class="fc" id="L53">        body.setProduct( bProductToProduct( dtoInt.getProduct() ) );</span>
+
+<span class="fc" id="L55">        return body;</span>
+    }
+
+    protected BIdentityDocument identityDocumentToBIdentityDocument(IdentityDocument identityDocument) {
+<span class="pc bpc" id="L59" title="1 of 2 branches missed.">        if ( identityDocument == null ) {</span>
+<span class="nc" id="L60">            return null;</span>
+        }
+
+<span class="fc" id="L63">        BIdentityDocument bIdentityDocument = new BIdentityDocument();</span>
+
+<span class="fc" id="L65">        bIdentityDocument.setDocumentType( identityDocument.getDocumentType() );</span>
+<span class="fc" id="L66">        bIdentityDocument.setDocumentNumber( identityDocument.getDocumentNumber() );</span>
+
+<span class="fc" id="L68">        return bIdentityDocument;</span>
+    }
+
+    protected BLaboralInformation laboralInformationToBLaboralInformation(LaboralInformation laboralInformation) {
+<span class="pc bpc" id="L72" title="1 of 2 branches missed.">        if ( laboralInformation == null ) {</span>
+<span class="nc" id="L73">            return null;</span>
+        }
+
+<span class="fc" id="L76">        BLaboralInformation bLaboralInformation = new BLaboralInformation();</span>
+
+<span class="fc" id="L78">        bLaboralInformation.setCompanyId( laboralInformation.getCompanyId() );</span>
+<span class="fc" id="L79">        bLaboralInformation.setDeclaratedIncome( laboralInformation.getDeclaratedIncome() );</span>
+
+<span class="fc" id="L81">        return bLaboralInformation;</span>
+    }
+
+    protected BPerson personToBPerson(Person person) {
+<span class="pc bpc" id="L85" title="1 of 2 branches missed.">        if ( person == null ) {</span>
+<span class="nc" id="L86">            return null;</span>
+        }
+
+<span class="fc" id="L89">        BPerson bPerson = new BPerson();</span>
+
+<span class="fc" id="L91">        bPerson.setIdentityDocument( identityDocumentToBIdentityDocument( person.getIdentityDocument() ) );</span>
+<span class="fc" id="L92">        bPerson.setFirstName( person.getFirstName() );</span>
+<span class="fc" id="L93">        bPerson.setMiddleName( person.getMiddleName() );</span>
+<span class="fc" id="L94">        bPerson.setLastName( person.getLastName() );</span>
+<span class="fc" id="L95">        bPerson.setLaboralInformation( laboralInformationToBLaboralInformation( person.getLaboralInformation() ) );</span>
+
+<span class="fc" id="L97">        return bPerson;</span>
+    }
+
+    protected BInformationSources informationSourcesToBInformationSources(InformationSources informationSources) {
+<span class="pc bpc" id="L101" title="1 of 2 branches missed.">        if ( informationSources == null ) {</span>
+<span class="nc" id="L102">            return null;</span>
+        }
+
+<span class="fc" id="L105">        BInformationSources bInformationSources = new BInformationSources();</span>
+
+<span class="fc" id="L107">        bInformationSources.setId( informationSources.getId() );</span>
+<span class="fc" id="L108">        bInformationSources.setIsConsulted( informationSources.getIsConsulted() );</span>
+
+<span class="fc" id="L110">        return bInformationSources;</span>
+    }
+
+    protected List&lt;BInformationSources&gt; informationSourcesListToBInformationSourcesList(List&lt;InformationSources&gt; list) {
+<span class="pc bpc" id="L114" title="1 of 2 branches missed.">        if ( list == null ) {</span>
+<span class="nc" id="L115">            return null;</span>
+        }
+
+<span class="fc" id="L118">        List&lt;BInformationSources&gt; list1 = new ArrayList&lt;BInformationSources&gt;( list.size() );</span>
+<span class="fc bfc" id="L119" title="All 2 branches covered.">        for ( InformationSources informationSources : list ) {</span>
+<span class="fc" id="L120">            list1.add( informationSourcesToBInformationSources( informationSources ) );</span>
+        }
+
+<span class="fc" id="L123">        return list1;</span>
+    }
+
+    protected BProduct productToBProduct(Product product) {
+<span class="pc bpc" id="L127" title="1 of 2 branches missed.">        if ( product == null ) {</span>
+<span class="nc" id="L128">            return null;</span>
+        }
+
+<span class="fc" id="L131">        BProduct bProduct = new BProduct();</span>
+
+<span class="fc" id="L133">        bProduct.setId( product.getId() );</span>
+<span class="fc" id="L134">        bProduct.setName( product.getName() );</span>
+
+<span class="fc" id="L136">        return bProduct;</span>
+    }
+
+    protected IdentityDocument bIdentityDocumentToIdentityDocument(BIdentityDocument bIdentityDocument) {
+<span class="pc bpc" id="L140" title="1 of 2 branches missed.">        if ( bIdentityDocument == null ) {</span>
+<span class="nc" id="L141">            return null;</span>
+        }
+
+<span class="fc" id="L144">        IdentityDocument identityDocument = new IdentityDocument();</span>
+
+<span class="fc" id="L146">        identityDocument.setDocumentType( bIdentityDocument.getDocumentType() );</span>
+<span class="fc" id="L147">        identityDocument.setDocumentNumber( bIdentityDocument.getDocumentNumber() );</span>
+
+<span class="fc" id="L149">        return identityDocument;</span>
+    }
+
+    protected LaboralInformation bLaboralInformationToLaboralInformation(BLaboralInformation bLaboralInformation) {
+<span class="pc bpc" id="L153" title="1 of 2 branches missed.">        if ( bLaboralInformation == null ) {</span>
+<span class="nc" id="L154">            return null;</span>
+        }
+
+<span class="fc" id="L157">        LaboralInformation laboralInformation = new LaboralInformation();</span>
+
+<span class="fc" id="L159">        laboralInformation.setCompanyId( bLaboralInformation.getCompanyId() );</span>
+<span class="fc" id="L160">        laboralInformation.setDeclaratedIncome( bLaboralInformation.getDeclaratedIncome() );</span>
+
+<span class="fc" id="L162">        return laboralInformation;</span>
+    }
+
+    protected Person bPersonToPerson(BPerson bPerson) {
+<span class="pc bpc" id="L166" title="1 of 2 branches missed.">        if ( bPerson == null ) {</span>
+<span class="nc" id="L167">            return null;</span>
+        }
+
+<span class="fc" id="L170">        Person person = new Person();</span>
+
+<span class="fc" id="L172">        person.setIdentityDocument( bIdentityDocumentToIdentityDocument( bPerson.getIdentityDocument() ) );</span>
+<span class="fc" id="L173">        person.setFirstName( bPerson.getFirstName() );</span>
+<span class="fc" id="L174">        person.setMiddleName( bPerson.getMiddleName() );</span>
+<span class="fc" id="L175">        person.setLastName( bPerson.getLastName() );</span>
+<span class="fc" id="L176">        person.setLaboralInformation( bLaboralInformationToLaboralInformation( bPerson.getLaboralInformation() ) );</span>
+
+<span class="fc" id="L178">        return person;</span>
+    }
+
+    protected InformationSources bInformationSourcesToInformationSources(BInformationSources bInformationSources) {
+<span class="pc bpc" id="L182" title="1 of 2 branches missed.">        if ( bInformationSources == null ) {</span>
+<span class="nc" id="L183">            return null;</span>
+        }
+
+<span class="fc" id="L186">        InformationSources informationSources = new InformationSources();</span>
+
+<span class="fc" id="L188">        informationSources.setId( bInformationSources.getId() );</span>
+<span class="fc" id="L189">        informationSources.setIsConsulted( bInformationSources.getIsConsulted() );</span>
+
+<span class="fc" id="L191">        return informationSources;</span>
+    }
+
+    protected List&lt;InformationSources&gt; bInformationSourcesListToInformationSourcesList(List&lt;BInformationSources&gt; list) {
+<span class="pc bpc" id="L195" title="1 of 2 branches missed.">        if ( list == null ) {</span>
+<span class="nc" id="L196">            return null;</span>
+        }
+
+<span class="fc" id="L199">        List&lt;InformationSources&gt; list1 = new ArrayList&lt;InformationSources&gt;( list.size() );</span>
+<span class="fc bfc" id="L200" title="All 2 branches covered.">        for ( BInformationSources bInformationSources : list ) {</span>
+<span class="fc" id="L201">            list1.add( bInformationSourcesToInformationSources( bInformationSources ) );</span>
+        }
+
+<span class="fc" id="L204">        return list1;</span>
+    }
+
+    protected Product bProductToProduct(BProduct bProduct) {
+<span class="pc bpc" id="L208" title="1 of 2 branches missed.">        if ( bProduct == null ) {</span>
+<span class="nc" id="L209">            return null;</span>
+        }
+
+<span class="fc" id="L212">        Product product = new Product();</span>
+
+<span class="fc" id="L214">        product.setId( bProduct.getId() );</span>
+<span class="fc" id="L215">        product.setName( bProduct.getName() );</span>
+
+<span class="fc" id="L217">        return product;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

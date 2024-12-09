@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Data.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ccol_riskadmissionscalculateincomesv0</a> &gt; <a href="index.source.html" class="el_package">com.bbva.ccol.riskadmissionscalculateincomes.business.v0.dao.model.cmlct001_1.out</a> &gt; <span class="el_source">Data.java</span></div><h1>Data.java</h1><pre class="source lang-java linenums">package com.bbva.ccol.riskadmissionscalculateincomes.business.v0.dao.model.cmlct001_1.out;
+
+import java.util.List;
+
+import com.bbva.jee.arq.spring.core.host.Campo;
+import com.bbva.jee.arq.spring.core.host.FilaCampoTabular;
+import com.bbva.jee.arq.spring.core.host.TipoCampo;
+
+/**
+ * &lt;p&gt;Bean fila para el campo tabular &lt;code&gt;data&lt;/code&gt;, utilizado por la clase &lt;code&gt;ResponseTransactionCmlct001_1&lt;/code&gt;&lt;/p&gt;
+ * 
+ * @see ResponseTransactionCmlct001_1
+ * 
+ * @author Arquitectura Spring BBVA
+ */
+@FilaCampoTabular
+<span class="nc" id="L17">public class Data {</span>
+	
+	/**
+	 * &lt;p&gt;Campo &lt;code&gt;person&lt;/code&gt;, &amp;iacute;ndice: &lt;code&gt;1&lt;/code&gt;, tipo: &lt;code&gt;DTO&lt;/code&gt;
+	 */
+	@Campo(indice = 1, nombre = &quot;person&quot;, tipo = TipoCampo.DTO)
+	private Person person;
+	
+	/**
+	 * &lt;p&gt;Campo &lt;code&gt;informationSources&lt;/code&gt;, &amp;iacute;ndice: &lt;code&gt;2&lt;/code&gt;, tipo: &lt;code&gt;TABULAR&lt;/code&gt;
+	 */
+	@Campo(indice = 2, nombre = &quot;informationSources&quot;, tipo = TipoCampo.TABULAR)
+	private List&lt;InformationSources&gt; informationSources;
+	
+	/**
+	 * &lt;p&gt;Campo &lt;code&gt;totalIncomes&lt;/code&gt;, &amp;iacute;ndice: &lt;code&gt;3&lt;/code&gt;, tipo: &lt;code&gt;DTO&lt;/code&gt;
+	 */
+	@Campo(indice = 3, nombre = &quot;totalIncomes&quot;, tipo = TipoCampo.DTO)
+	private TotalIncomes totalIncomes;
+	
+	/**
+	 * &lt;p&gt;Campo &lt;code&gt;totalDeductions&lt;/code&gt;, &amp;iacute;ndice: &lt;code&gt;4&lt;/code&gt;, tipo: &lt;code&gt;DTO&lt;/code&gt;
+	 */
+	@Campo(indice = 4, nombre = &quot;totalDeductions&quot;, tipo = TipoCampo.DTO)
+	private TotalDeductions totalDeductions;
+	
+	/**
+	 * &lt;p&gt;Campo &lt;code&gt;employers&lt;/code&gt;, &amp;iacute;ndice: &lt;code&gt;5&lt;/code&gt;, tipo: &lt;code&gt;TABULAR&lt;/code&gt;
+	 */
+	@Campo(indice = 5, nombre = &quot;employers&quot;, tipo = TipoCampo.TABULAR)
+	private List&lt;Employers&gt; employers;
+	
+	/**
+	 * &lt;p&gt;Campo &lt;code&gt;employmentHistory&lt;/code&gt;, &amp;iacute;ndice: &lt;code&gt;6&lt;/code&gt;, tipo: &lt;code&gt;DTO&lt;/code&gt;
+	 */
+	@Campo(indice = 6, nombre = &quot;employmentHistory&quot;, tipo = TipoCampo.DTO)
+	private EmploymentHistory employmentHistory;
+	
+	/**
+	 * &lt;p&gt;Campo &lt;code&gt;status&lt;/code&gt;, &amp;iacute;ndice: &lt;code&gt;7&lt;/code&gt;, tipo: &lt;code&gt;DTO&lt;/code&gt;
+	 */
+	@Campo(indice = 7, nombre = &quot;status&quot;, tipo = TipoCampo.DTO)
+	private Status status;
+	
+
+	public Person getPerson() {
+<span class="nc" id="L63">	    return person;</span>
+	}
+
+	public void setPerson(Person person) {
+<span class="nc" id="L67">    	this.person = person;</span>
+<span class="nc" id="L68">	}</span>
+
+	public List&lt;InformationSources&gt; getInformationSources() {
+<span class="nc" id="L71">	    return informationSources;</span>
+	}
+
+	public void setInformationSources(List&lt;InformationSources&gt; informationSources) {
+<span class="nc" id="L75">    	this.informationSources = informationSources;</span>
+<span class="nc" id="L76">	}</span>
+
+	public TotalIncomes getTotalIncomes() {
+<span class="nc" id="L79">	    return totalIncomes;</span>
+	}
+
+	public void setTotalIncomes(TotalIncomes totalIncomes) {
+<span class="nc" id="L83">    	this.totalIncomes = totalIncomes;</span>
+<span class="nc" id="L84">	}</span>
+
+	public TotalDeductions getTotalDeductions() {
+<span class="nc" id="L87">	    return totalDeductions;</span>
+	}
+
+	public void setTotalDeductions(TotalDeductions totalDeductions) {
+<span class="nc" id="L91">    	this.totalDeductions = totalDeductions;</span>
+<span class="nc" id="L92">	}</span>
+
+	public List&lt;Employers&gt; getEmployers() {
+<span class="nc" id="L95">	    return employers;</span>
+	}
+
+	public void setEmployers(List&lt;Employers&gt; employers) {
+<span class="nc" id="L99">    	this.employers = employers;</span>
+<span class="nc" id="L100">	}</span>
+
+	public EmploymentHistory getEmploymentHistory() {
+<span class="nc" id="L103">	    return employmentHistory;</span>
+	}
+
+	public void setEmploymentHistory(EmploymentHistory employmentHistory) {
+<span class="nc" id="L107">    	this.employmentHistory = employmentHistory;</span>
+<span class="nc" id="L108">	}</span>
+
+	public Status getStatus() {
+<span class="nc" id="L111">	    return status;</span>
+	}
+
+	public void setStatus(Status status) {
+<span class="nc" id="L115">    	this.status = status;</span>
+<span class="nc" id="L116">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

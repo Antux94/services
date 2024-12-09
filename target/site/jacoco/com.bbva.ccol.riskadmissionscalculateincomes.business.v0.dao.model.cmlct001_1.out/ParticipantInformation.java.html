@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ParticipantInformation.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ccol_riskadmissionscalculateincomesv0</a> &gt; <a href="index.source.html" class="el_package">com.bbva.ccol.riskadmissionscalculateincomes.business.v0.dao.model.cmlct001_1.out</a> &gt; <span class="el_source">ParticipantInformation.java</span></div><h1>ParticipantInformation.java</h1><pre class="source lang-java linenums">package com.bbva.ccol.riskadmissionscalculateincomes.business.v0.dao.model.cmlct001_1.out;
+
+import java.util.List;
+
+import com.bbva.jee.arq.spring.core.host.Campo;
+import com.bbva.jee.arq.spring.core.host.FilaCampoTabular;
+import com.bbva.jee.arq.spring.core.host.TipoCampo;
+
+/**
+ * &lt;p&gt;Bean fila para el campo tabular &lt;code&gt;participantInformation&lt;/code&gt;, utilizado por la clase &lt;code&gt;Employers&lt;/code&gt;&lt;/p&gt;
+ * 
+ * @see Employers
+ * 
+ * @author Arquitectura Spring BBVA
+ */
+@FilaCampoTabular
+<span class="nc" id="L17">public class ParticipantInformation {</span>
+	
+	/**
+	 * &lt;p&gt;Campo &lt;code&gt;seniority&lt;/code&gt;, &amp;iacute;ndice: &lt;code&gt;1&lt;/code&gt;, tipo: &lt;code&gt;DTO&lt;/code&gt;
+	 */
+	@Campo(indice = 1, nombre = &quot;seniority&quot;, tipo = TipoCampo.DTO)
+	private Seniority seniority;
+	
+	/**
+	 * &lt;p&gt;Campo &lt;code&gt;incomes&lt;/code&gt;, &amp;iacute;ndice: &lt;code&gt;2&lt;/code&gt;, tipo: &lt;code&gt;TABULAR&lt;/code&gt;
+	 */
+	@Campo(indice = 2, nombre = &quot;incomes&quot;, tipo = TipoCampo.TABULAR)
+	private List&lt;Incomes&gt; incomes;
+	
+	/**
+	 * &lt;p&gt;Campo &lt;code&gt;deduction&lt;/code&gt;, &amp;iacute;ndice: &lt;code&gt;3&lt;/code&gt;, tipo: &lt;code&gt;DTO&lt;/code&gt;
+	 */
+	@Campo(indice = 3, nombre = &quot;deduction&quot;, tipo = TipoCampo.DTO)
+	private Deduction deduction;
+	
+	/**
+	 * &lt;p&gt;Campo &lt;code&gt;employmentSituation&lt;/code&gt;, &amp;iacute;ndice: &lt;code&gt;4&lt;/code&gt;, tipo: &lt;code&gt;DTO&lt;/code&gt;
+	 */
+	@Campo(indice = 4, nombre = &quot;employmentSituation&quot;, tipo = TipoCampo.DTO)
+	private EmploymentSituation employmentSituation;
+	
+	/**
+	 * &lt;p&gt;Campo &lt;code&gt;dateRelationship&lt;/code&gt;, &amp;iacute;ndice: &lt;code&gt;5&lt;/code&gt;, tipo: &lt;code&gt;ALFANUMERICO&lt;/code&gt;
+	 */
+	@Campo(indice = 5, nombre = &quot;dateRelationship&quot;, tipo = TipoCampo.ALFANUMERICO, longitudMaxima = 10, signo = true, obligatorio = true)
+	private String dateRelationship;
+	
+
+	public Seniority getSeniority() {
+<span class="nc" id="L51">	    return seniority;</span>
+	}
+
+	public void setSeniority(Seniority seniority) {
+<span class="nc" id="L55">    	this.seniority = seniority;</span>
+<span class="nc" id="L56">	}</span>
+
+	public List&lt;Incomes&gt; getIncomes() {
+<span class="nc" id="L59">	    return incomes;</span>
+	}
+
+	public void setIncomes(List&lt;Incomes&gt; incomes) {
+<span class="nc" id="L63">    	this.incomes = incomes;</span>
+<span class="nc" id="L64">	}</span>
+
+	public Deduction getDeduction() {
+<span class="nc" id="L67">	    return deduction;</span>
+	}
+
+	public void setDeduction(Deduction deduction) {
+<span class="nc" id="L71">    	this.deduction = deduction;</span>
+<span class="nc" id="L72">	}</span>
+
+	public EmploymentSituation getEmploymentSituation() {
+<span class="nc" id="L75">	    return employmentSituation;</span>
+	}
+
+	public void setEmploymentSituation(EmploymentSituation employmentSituation) {
+<span class="nc" id="L79">    	this.employmentSituation = employmentSituation;</span>
+<span class="nc" id="L80">	}</span>
+
+	public String getDateRelationship() {
+<span class="nc" id="L83">	    return dateRelationship;</span>
+	}
+
+	public void setDateRelationship(String dateRelationship) {
+<span class="nc" id="L87">    	this.dateRelationship = dateRelationship;</span>
+<span class="nc" id="L88">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>
