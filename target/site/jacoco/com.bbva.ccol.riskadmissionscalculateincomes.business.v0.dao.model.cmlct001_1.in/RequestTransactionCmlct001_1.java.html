@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RequestTransactionCmlct001_1.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ccol_riskadmissionscalculateincomesv0</a> &gt; <a href="index.source.html" class="el_package">com.bbva.ccol.riskadmissionscalculateincomes.business.v0.dao.model.cmlct001_1.in</a> &gt; <span class="el_source">RequestTransactionCmlct001_1.java</span></div><h1>RequestTransactionCmlct001_1.java</h1><pre class="source lang-java linenums">package com.bbva.ccol.riskadmissionscalculateincomes.business.v0.dao.model.cmlct001_1.in;
+
+import com.bbva.ccol.riskadmissionscalculateincomes.business.v0.dao.model.cmlct001_1.out.*;
+import java.util.List;
+
+import com.bbva.jee.arq.spring.core.host.Atributo;
+import com.bbva.jee.arq.spring.core.host.Campo;
+import com.bbva.jee.arq.spring.core.host.TipoCampo;
+import com.bbva.jee.arq.spring.core.host.Transaccion;
+
+/**
+ * &lt;p&gt;Transacci&amp;oacute;n &lt;code&gt;CMLCT001&lt;/code&gt;&lt;/p&gt;
+ * &lt;p&gt;Informaci&amp;oacute;n de la transacci&amp;oacute;n:
+ * &lt;ul&gt;
+ *    &lt;li&gt;&lt;b&gt;Tipo:&lt;/b&gt; 1&lt;/li&gt;
+ *    &lt;li&gt;&lt;b&gt;Subtipo:&lt;/b&gt; 1&lt;/li&gt;
+ *    &lt;li&gt;&lt;b&gt;Versi&amp;oacute;n:&lt;/b&gt; 1&lt;/li&gt;
+ *    &lt;li&gt;&lt;b&gt;Clase de petici&amp;oacute;n:&lt;/b&gt; RequestTransactionCmlct001_1&lt;/li&gt;
+ *    &lt;li&gt;&lt;b&gt;Clase de respuesta:&lt;/b&gt; ResponseTransactionCmlct001_1&lt;/li&gt;
+ * &lt;/ul&gt;
+ * &lt;/p&gt;
+ * &lt;p&gt;Configuraci&amp;oacute;n de la transacci&amp;oacute;n:
+ * &lt;ul&gt;
+ *    &lt;li&gt;&lt;b&gt;Nombre configuraci&amp;oacute;n:&lt;/b&gt; default_apx&lt;/li&gt;
+ * &lt;/ul&gt;
+ * &lt;/p&gt;
+ * &lt;p&gt;Copy de la transacci&amp;oacute;n:&lt;/p&gt;
+ * &lt;code&gt;&lt;pre&gt; * FICHERO: CMLCT001-01-CO.xml
+ * &amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;yes&amp;quot;?&amp;gt;
+ * &amp;lt;transaction xmlns=&amp;quot;http://www.w3schools.com&amp;quot; transactionName=&amp;quot;CMLCT001&amp;quot; application=&amp;quot;CMLC&amp;quot; version=&amp;quot;01&amp;quot; country=&amp;quot;CO&amp;quot; language=&amp;quot;ES&amp;quot;&amp;gt;
+ * &amp;lt;paramsIn&amp;gt;
+ * &amp;lt;dto order=&amp;quot;1&amp;quot; name=&amp;quot;person&amp;quot; mandatory=&amp;quot;1&amp;quot; package=&amp;quot;com.bbva.cmlc.dto.c001.PersonDTO&amp;quot; artifactId=&amp;quot;CMLCC001&amp;quot;&amp;gt;
+ * &amp;lt;dto order=&amp;quot;1&amp;quot; name=&amp;quot;identityDocument&amp;quot; mandatory=&amp;quot;1&amp;quot; package=&amp;quot;com.bbva.cmlc.dto.c001.IdentityDocumentDTO&amp;quot; artifactId=&amp;quot;CMLCC001&amp;quot;&amp;gt;
+ * &amp;lt;parameter order=&amp;quot;1&amp;quot; name=&amp;quot;documentType&amp;quot; mandatory=&amp;quot;1&amp;quot; type=&amp;quot;String&amp;quot; size=&amp;quot;255&amp;quot;/&amp;gt;
+ * &amp;lt;parameter order=&amp;quot;2&amp;quot; name=&amp;quot;documentNumber&amp;quot; mandatory=&amp;quot;1&amp;quot; type=&amp;quot;String&amp;quot; size=&amp;quot;255&amp;quot;/&amp;gt;
+ * &amp;lt;/dto&amp;gt;
+ * &amp;lt;parameter order=&amp;quot;2&amp;quot; name=&amp;quot;firstName&amp;quot; mandatory=&amp;quot;1&amp;quot; type=&amp;quot;String&amp;quot; size=&amp;quot;255&amp;quot;/&amp;gt;
+ * &amp;lt;parameter order=&amp;quot;3&amp;quot; name=&amp;quot;middleName&amp;quot; mandatory=&amp;quot;0&amp;quot; type=&amp;quot;String&amp;quot; size=&amp;quot;255&amp;quot;/&amp;gt;
+ * &amp;lt;parameter order=&amp;quot;4&amp;quot; name=&amp;quot;lastName&amp;quot; mandatory=&amp;quot;1&amp;quot; type=&amp;quot;String&amp;quot; size=&amp;quot;255&amp;quot;/&amp;gt;
+ * &amp;lt;dto order=&amp;quot;5&amp;quot; name=&amp;quot;laboralInformation&amp;quot; mandatory=&amp;quot;0&amp;quot; package=&amp;quot;com.bbva.cmlc.dto.c001.LaboralInformationDTO&amp;quot; artifactId=&amp;quot;CMLCC001&amp;quot;&amp;gt;
+ * &amp;lt;parameter order=&amp;quot;1&amp;quot; name=&amp;quot;companyId&amp;quot; mandatory=&amp;quot;0&amp;quot; type=&amp;quot;String&amp;quot; size=&amp;quot;255&amp;quot;/&amp;gt;
+ * &amp;lt;parameter order=&amp;quot;2&amp;quot; name=&amp;quot;declaratedIncome&amp;quot; mandatory=&amp;quot;0&amp;quot; type=&amp;quot;Long&amp;quot; size=&amp;quot;15&amp;quot;/&amp;gt;
+ * &amp;lt;/dto&amp;gt;
+ * &amp;lt;/dto&amp;gt;
+ * &amp;lt;list order=&amp;quot;2&amp;quot; name=&amp;quot;informationSources&amp;quot; mandatory=&amp;quot;1&amp;quot;&amp;gt;
+ * &amp;lt;dto order=&amp;quot;1&amp;quot; name=&amp;quot;Type&amp;quot; mandatory=&amp;quot;1&amp;quot; package=&amp;quot;com.bbva.cmlc.dto.c001.InformationSourcesDTO&amp;quot; artifactId=&amp;quot;CMLCC001&amp;quot;&amp;gt;
+ * &amp;lt;parameter order=&amp;quot;1&amp;quot; name=&amp;quot;id&amp;quot; mandatory=&amp;quot;1&amp;quot; type=&amp;quot;String&amp;quot; size=&amp;quot;255&amp;quot;/&amp;gt;
+ * &amp;lt;parameter order=&amp;quot;2&amp;quot; name=&amp;quot;isConsulted&amp;quot; mandatory=&amp;quot;0&amp;quot; type=&amp;quot;String&amp;quot; size=&amp;quot;255&amp;quot;/&amp;gt;
+ * &amp;lt;/dto&amp;gt;
+ * &amp;lt;/list&amp;gt;
+ * &amp;lt;dto order=&amp;quot;3&amp;quot; name=&amp;quot;product&amp;quot; mandatory=&amp;quot;0&amp;quot; package=&amp;quot;com.bbva.cmlc.dto.c001.ProductInDTO&amp;quot; artifactId=&amp;quot;CMLCC001&amp;quot;&amp;gt;
+ * &amp;lt;parameter order=&amp;quot;1&amp;quot; name=&amp;quot;id&amp;quot; mandatory=&amp;quot;1&amp;quot; type=&amp;quot;String&amp;quot; size=&amp;quot;255&amp;quot;/&amp;gt;
+ * &amp;lt;parameter order=&amp;quot;2&amp;quot; name=&amp;quot;name&amp;quot; mandatory=&amp;quot;1&amp;quot; type=&amp;quot;String&amp;quot; size=&amp;quot;255&amp;quot;/&amp;gt;
+ * &amp;lt;/dto&amp;gt;
+ * 
+ * &amp;lt;/paramsIn&amp;gt;
+ * &amp;lt;paramsOut&amp;gt;
+ * &amp;lt;/paramsOut&amp;gt;
+ * &amp;lt;description&amp;gt;For RiskAdmission&amp;lt;/description&amp;gt;
+ * &amp;lt;/transaction&amp;gt;
+&lt;/pre&gt;&lt;/code&gt;
+ * 
+ * @see ResponseTransactionCmlct001_1
+ *
+ * @author Arquitectura Spring BBVA
+ */
+@Transaccion(
+	nombre = &quot;CMLCT001&quot;,
+	tipo = 1, 
+	subtipo = 1,	
+	version = 1,
+	configuracion = &quot;default_apx&quot;,
+	respuesta = ResponseTransactionCmlct001_1.class,
+	atributos = {@Atributo(nombre = &quot;country&quot;, valor = &quot;CO&quot;)}
+)
+<span class="fc" id="L76">public class RequestTransactionCmlct001_1 {</span>
+		
+		/**
+	 * &lt;p&gt;Campo &lt;code&gt;person&lt;/code&gt;, &amp;iacute;ndice: &lt;code&gt;1&lt;/code&gt;, tipo: &lt;code&gt;DTO&lt;/code&gt;
+	 */
+	@Campo(indice = 1, nombre = &quot;person&quot;, tipo = TipoCampo.DTO)
+	private Person person;
+	
+	/**
+	 * &lt;p&gt;Campo &lt;code&gt;informationSources&lt;/code&gt;, &amp;iacute;ndice: &lt;code&gt;2&lt;/code&gt;, tipo: &lt;code&gt;TABULAR&lt;/code&gt;
+	 */
+	@Campo(indice = 2, nombre = &quot;informationSources&quot;, tipo = TipoCampo.TABULAR)
+	private List&lt;InformationSources&gt; informationSources;
+	
+	/**
+	 * &lt;p&gt;Campo &lt;code&gt;product&lt;/code&gt;, &amp;iacute;ndice: &lt;code&gt;3&lt;/code&gt;, tipo: &lt;code&gt;DTO&lt;/code&gt;
+	 */
+	@Campo(indice = 3, nombre = &quot;product&quot;, tipo = TipoCampo.DTO)
+	private Product product;
+	
+
+	public Person getPerson() {
+<span class="fc" id="L98">	    return person;</span>
+	}
+
+	public void setPerson(Person person) {
+<span class="fc" id="L102">    	this.person = person;</span>
+<span class="fc" id="L103">	}</span>
+
+	public List&lt;InformationSources&gt; getInformationSources() {
+<span class="fc" id="L106">	    return informationSources;</span>
+	}
+
+	public void setInformationSources(List&lt;InformationSources&gt; informationSources) {
+<span class="fc" id="L110">    	this.informationSources = informationSources;</span>
+<span class="fc" id="L111">	}</span>
+
+	public Product getProduct() {
+<span class="fc" id="L114">	    return product;</span>
+	}
+
+	public void setProduct(Product product) {
+<span class="fc" id="L118">    	this.product = product;</span>
+<span class="fc" id="L119">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>
